@@ -39,7 +39,7 @@ return [
         |
         */
 
-        'driver' => 'gd',
+        'driver' => 'imagick',
 
         /*
         |--------------------------------------------------------------------------
@@ -96,7 +96,12 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            // Galerie — affichage masonry (largeur max 1600px)
+            'gallery_avif' => ['w' => 1600, 'q' => 80, 'fm' => 'avif'],
+            'gallery_webp' => ['w' => 1600, 'q' => 82, 'fm' => 'webp'],
+            // Miniatures — listing des galeries (largeur max 800px)
+            'thumb_avif'    => ['w' => 800,  'q' => 78, 'fm' => 'avif', 'fit' => 'crop'],
+            'thumb_webp'    => ['w' => 800,  'q' => 80, 'fm' => 'webp', 'fit' => 'crop'],
         ],
 
         /*

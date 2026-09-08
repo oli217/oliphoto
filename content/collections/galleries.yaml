@@ -1,0 +1,11 @@
+title: Galeries
+template: galleries/show
+layout: layout
+route: '/galeries/{slug}'
+sort_field: date_start
+sort_direction: desc
+dated: false
+revisions: false
+taxonomies:
+  - categories
+  - tags

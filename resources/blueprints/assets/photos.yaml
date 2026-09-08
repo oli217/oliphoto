@@ -1,0 +1,67 @@
+title: Photo
+fields:
+  -
+    handle: alt
+    field:
+      display: Texte alternatif
+      type: text
+      instructions: Description de l'image pour l'accessibilité et le SEO
+  -
+    handle: caption
+    field:
+      display: Légende
+      type: text
+  -
+    handle: exif_camera
+    field:
+      display: Appareil photo
+      type: text
+      read_only: true
+  -
+    handle: exif_lens
+    field:
+      display: Objectif
+      type: text
+      read_only: true
+  -
+    handle: exif_focal_length
+    field:
+      display: Focale
+      type: text
+      read_only: true
+  -
+    handle: exif_aperture
+    field:
+      display: Ouverture
+      type: text
+      read_only: true
+  -
+    handle: exif_shutter_speed
+    field:
+      display: Vitesse d'obturation
+      type: text
+      read_only: true
+  -
+    handle: exif_iso
+    field:
+      display: ISO
+      type: text
+      read_only: true
+  -
+    handle: exif_date_taken
+    field:
+      display: Date de prise de vue
+      type: text
+      read_only: true
+  -
+    handle: exif_width
+    field:
+      display: Largeur (px)
+      type: integer
+      read_only: true
+  -
+    handle: exif_height
+    field:
+      display: Hauteur (px)
+      type: integer
+      read_only: true

@@ -11,6 +11,9 @@
     "php": "^8.3",
     "laravel/framework": "^13.17",
     "laravel/tinker": "^3.0",
+    "oliweb/statamic-cap": "^1.13",
+    "oliweb/statamic-csp-nonce": "^1.0",
+    "oliweb/statamic-privacy-analytics": "^4.7",
     "statamic/cms": "^6.0"
   },
   "require-dev": {

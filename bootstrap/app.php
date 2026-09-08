@@ -12,7 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // CSP en premier (génère le nonce avant tout rendu)
+        $middleware->prependToGroup('web', \App\Http\Middleware\CspMiddleware::class);
+
+        // Protection galeries par mot de passe (après CSP pour avoir le nonce)
+        $middleware->appendToGroup('web', \App\Http\Middleware\GalleryPasswordMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

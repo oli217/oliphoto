@@ -1,0 +1,7 @@
+title: Catégorie
+fields:
+  -
+    handle: description
+    field:
+      display: Description
+      type: markdown

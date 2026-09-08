@@ -1,0 +1,89 @@
+title: Galerie
+tabs:
+  main:
+    display: Informations
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              display: Titre
+              type: text
+              required: true
+              validate: required
+          -
+            handle: description
+            field:
+              display: Description
+              type: markdown
+          -
+            handle: cover
+            field:
+              display: Photo de couverture
+              type: assets
+              container: photos
+              max_files: 1
+              restrict: false
+              allow_uploads: true
+          -
+            handle: date_start
+            field:
+              display: Date de début
+              type: date
+              time_enabled: false
+          -
+            handle: date_end
+            field:
+              display: Date de fin
+              type: date
+              time_enabled: false
+          -
+            handle: location
+            field:
+              display: Lieu
+              type: text
+  photos:
+    display: Photos
+    sections:
+      -
+        fields:
+          -
+            handle: photos
+            field:
+              display: Photos de la galerie
+              type: assets
+              container: photos
+              max_files: null
+              restrict: false
+              allow_uploads: true
+              mode: list
+  access:
+    display: Accès
+    sections:
+      -
+        fields:
+          -
+            handle: password
+            field:
+              display: Mot de passe
+              type: text
+              input_type: password
+              instructions: Laisser vide pour une galerie publique
+  taxonomy:
+    display: Classification
+    sections:
+      -
+        fields:
+          -
+            handle: categories
+            field:
+              display: Catégories
+              type: terms
+              taxonomy: categories
+          -
+            handle: tags
+            field:
+              display: Mots-clés
+              type: terms
+              taxonomy: tags

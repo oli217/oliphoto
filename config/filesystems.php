@@ -70,6 +70,15 @@ return [
             'report' => false,
         ],
 
+        'photos' => [
+            'driver' => 'local',
+            'root' => public_path('photos'),
+            'url' => '/photos',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
     ],
 
     /*

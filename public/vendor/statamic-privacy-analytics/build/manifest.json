@@ -1,0 +1,23 @@
+{
+  "resources/css/statamic-analytics.css": {
+    "file": "assets/statamic-analytics--r3RbQkV.css",
+    "src": "resources/css/statamic-analytics.css",
+    "isEntry": true,
+    "name": "statamic-analytics",
+    "names": [
+      "statamic-analytics.css"
+    ]
+  },
+  "resources/js/consent-banner.js": {
+    "file": "assets/consent-banner-CJh1zk-q.js",
+    "name": "consent-banner",
+    "src": "resources/js/consent-banner.js",
+    "isEntry": true
+  },
+  "resources/js/statamic-analytics.js": {
+    "file": "assets/statamic-analytics-lmbJMPGd.js",
+    "name": "statamic-analytics",
+    "src": "resources/js/statamic-analytics.js",
+    "isEntry": true
+  }
+}
