@@ -1,0 +1,23 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "watch": "vite",
+    "predeploy": "git diff-index --quiet HEAD -- || (echo '⚠️  Changements non commités!' && exit 1)",
+    "deploy": "./scripts/deploy.sh",
+    "postdeploy": "echo '✅ Déploiement terminé!'"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "concurrently": "^10.0.3",
+    "laravel-vite-plugin": "^3.1",
+    "tailwindcss": "^4.0.6",
+    "vite": "^8.0.0"
+  },
+  "optionalDependencies": {
+    "@laravel/multiplex": "^0.4.1"
+  }
+}
