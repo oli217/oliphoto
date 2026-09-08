@@ -25,7 +25,7 @@ class ExtractExifOnUpload
             return;
         }
 
-        $exif = @exif_read_data($path, sections: 'ANY_TAG', as_arrays: false);
+        $exif = @exif_read_data($path, 'ANY_TAG', false);
 
         if (! $exif) {
             return;
