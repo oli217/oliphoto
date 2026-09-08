@@ -80,10 +80,10 @@ tabs:
             field:
               display: Catégories
               type: terms
-              taxonomy: categories
+              taxonomies: [categories]
           -
             handle: tags
             field:
               display: Mots-clés
               type: terms
-              taxonomy: tags
+              taxonomies: [tags]
