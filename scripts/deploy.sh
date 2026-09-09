@@ -68,7 +68,6 @@ rsync -avz --delete $DRY_RUN \
     --exclude='storage/framework/cache/*' \
     --exclude='storage/framework/sessions/*' \
     --exclude='storage/framework/views/*' \
-    --exclude='public/build/' \
     --exclude='users/' \
     ./ $REMOTE:$REMOTE_PATH/
 

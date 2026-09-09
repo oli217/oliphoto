@@ -1,0 +1,11 @@
+name: Olivier
+super: true
+id: 8cebd1d3-36d1-4e74-b78a-73ec9a509446
+password_hash: $2y$12$6hz9ogHrNqMdPlpqGy3LG.5ZQuMwSZgKd/.98LbHiykJ.VMSuKpRC
+preferences:
+  collections:
+    galleries:
+      view: list
+  assets:
+    photos:
+      per_page: 100
