@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Statamic\Facades\Asset;
 use Statamic\Facades\Entry;
-use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use ZipArchive;
 
 class ZipDownloadController extends Controller
 {
-    public function download(Request $request): StreamedResponse
+    public function download(Request $request): BinaryFileResponse
     {
         $validated = $request->validate([
             'gallery'  => 'required|string',
