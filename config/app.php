@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Statamic'),
+     'scheduler_token' => env('SCHEDULER_TOKEN'),
 
     /*
     |--------------------------------------------------------------------------
