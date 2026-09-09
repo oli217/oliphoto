@@ -1,9 +1,3 @@
-# Limites upload PHP (Apache mod_php / mod_fcgid)
-php_value upload_max_filesize 200M
-php_value post_max_size 1G
-php_value max_file_uploads 100
-php_value memory_limit 512M
-
 # Bloquer l'accès direct aux fichiers de config PHP
 <FilesMatch "^\.user\.ini$">
     Require all denied
