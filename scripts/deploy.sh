@@ -55,6 +55,11 @@ EOF
 echo "🔨 Build des assets..."
 yarn build
 
+echo "🔧 Optimisation Statamic..."
+php please stache:clear
+php please glide:clear
+
+
 echo "📦 Déploiement..."
 rsync -avz --delete $DRY_RUN \
     --exclude='.git' \
@@ -69,6 +74,8 @@ rsync -avz --delete $DRY_RUN \
     --exclude='storage/framework/sessions/*' \
     --exclude='storage/framework/views/*' \
     --exclude='users/' \
+    --exclude='public/photos/' \
+    --exclude='public/build/' \
     ./ $REMOTE:$REMOTE_PATH/
 
 # Assets compilés : sync sans --delete (ne jamais supprimer un upload)
