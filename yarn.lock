@@ -10,6 +10,13 @@
     ansi-styles "^6.2.1"
     is-fullwidth-code-point "^5.0.0"
 
+"@alpinejs/csp@^3.17.2":
+  version "3.17.2"
+  resolved "https://registry.npmjs.org/@alpinejs/csp/-/csp-3.17.2.tgz"
+  integrity sha512-jJXIzBaplTu1xVuhtNXEYDQDbQrdVJbXHYSVeF22fz4Vzm+g0X2XMb4pY1ywEpYLsFRx7ZcBE5gMyyuJpKPfHg==
+  dependencies:
+    "@vue/reactivity" "~3.5.40"
+
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.13"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz"
@@ -66,6 +73,11 @@
   resolved "https://registry.npmjs.org/@rolldown/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.2.7.tgz"
   integrity sha512-r8/z8n7GFaYRln3xmP1Cxy0HH/HLM0uBUPkEuSVEfKGDA89M0FsZRZJRSwe/tJjRx+fpH/gjorfhB8tmEbSFLA==
 
+"@rolldown/binding-linux-x64-musl@1.2.7":
+  version "1.2.7"
+  resolved "https://registry.npmjs.org/@rolldown/binding-linux-x64-musl/-/binding-linux-x64-musl-1.2.7.tgz"
+  integrity sha512-pAsE8iiDxUg1xBqdhrTfg45AVDVpirjz00sblEYClGNNcMnDb+e8beQgqIAw6LvauX/APvgxUnwrgun/YYGBhw==
+
 "@rolldown/pluginutils@^1.0.0":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz"
@@ -88,6 +100,11 @@
   version "4.3.3"
   resolved "https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.3.3.tgz"
   integrity sha512-tx7us1muwOKAKWao2v/GaafFeQboE6aj88vC6ziN2NCGcRm8gWUhwjzg+YdVB1e4boAtdtma4L43onunI6NS4w==
+
+"@tailwindcss/oxide-linux-x64-musl@4.3.3":
+  version "4.3.3"
+  resolved "https://registry.npmjs.org/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.3.3.tgz"
+  integrity sha512-SJxX60smvHgasZoBy11dX6YRjXJFovwWBoedhbQPOBzgFWBHGB+TVPWB9BxzR7TTxU8FQZAI2AyiNCMzFm8Img==
 
 "@tailwindcss/oxide@4.3.3":
   version "4.3.3"
@@ -127,13 +144,6 @@
   version "3.5.42"
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.5.42.tgz"
   integrity sha512-2rPxex1jQf4jvl9MOHl6YaXCPcrNqz/FstMOEh3QWY+/OME9nQTvl9WYeCwhW7AFjaR0SnngZGlp/wkR6rkI6g==
-
-alpinejs@^3.17.2:
-  version "3.17.2"
-  resolved "https://registry.npmjs.org/alpinejs/-/alpinejs-3.17.2.tgz"
-  integrity sha512-xbnG3LlnmFkiNO49C+qhqjEDqOdB0snKqvT48ZVp8TakpZOpsoQbc/jAxpptQRjZi7c9rLeCfvwQ/XOSirIZFQ==
-  dependencies:
-    "@vue/reactivity" "~3.5.40"
 
 ansi-escapes@^7.3.0:
   version "7.3.0"
@@ -371,6 +381,16 @@ lightningcss-linux-x64-gnu@1.33.0:
   version "1.33.0"
   resolved "https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.33.0.tgz"
   integrity sha512-ar+Ju7LmcN0Jo4FpL4hpFybwNG9/3A/Br5KW2n2jyODg3MEZXaDYADdemoNS+BDNfMgKvylJLj4S5tyRActuAg==
+
+lightningcss-linux-x64-musl@1.32.0:
+  version "1.32.0"
+  resolved "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.32.0.tgz"
+  integrity sha512-bYcLp+Vb0awsiXg/80uCRezCYHNg1/l3mt0gzHnWV9XP1W5sKa5/TCdGWaR/zBM2PeF/HbsQv/j2URNOiVuxWg==
+
+lightningcss-linux-x64-musl@1.33.0:
+  version "1.33.0"
+  resolved "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.33.0.tgz"
+  integrity sha512-RYiYbkokw0trfKqqzfF55lginwEPrD3OJDfTuJzFs1MK6iFnDenaz1fqLLtX4ITG3OktJQXOeTaw1awrBAlZPw==
 
 lightningcss@^1.33.0:
   version "1.33.0"
