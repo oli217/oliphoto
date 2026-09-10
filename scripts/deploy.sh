@@ -76,11 +76,13 @@ rsync -avz --delete $DRY_RUN \
     --exclude='users/' \
     --exclude='public/photos/' \
     --exclude='public/build/' \
+    --eclude='content/'
     ./ $REMOTE:$REMOTE_PATH/
 
 # Assets compilés : sync sans --delete (ne jamais supprimer un upload)
 rsync -avz $DRY_RUN \
     ./public/build/ $REMOTE:$REMOTE_PATH/public/build/
+    ./content/ $REMOTE:$REMOTE_PATH/content/
 
 if [[ "$DRY_RUN" ]]; then
     echo "🧪 Test terminé, aucun changement effectué"
