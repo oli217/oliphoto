@@ -76,7 +76,7 @@ rsync -avz --delete $DRY_RUN \
     --exclude='users/' \
     --exclude='public/photos/' \
     --exclude='public/build/' \
-    --exlude='content/'
+    --exclude='content/'
     ./ $REMOTE:$REMOTE_PATH/
 
 # Assets compilés : sync sans --delete (ne jamais supprimer un upload)
