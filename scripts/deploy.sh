@@ -73,6 +73,7 @@ rsync -avz --delete $DRY_RUN \
     --exclude='storage/framework/cache/*' \
     --exclude='storage/framework/sessions/*' \
     --exclude='storage/framework/views/*' \
+    --exclude='storage/statamic/glide/' \
     --exclude='users/' \
     --exclude='public/photos/' \
     --exclude='public/build/' \
