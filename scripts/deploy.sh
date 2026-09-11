@@ -109,10 +109,10 @@ ssh -T $REMOTE bash << ENDSSH
     php artisan view:cache
     php artisan storage:link
     php please stache:clear
-    php please stache:warm
-    php artisan statamic:assets:meta
-    php please static:clear 2>/dev/null || true
     php please glide:clear
+    php please static:clear 2>/dev/null || true
+    php artisan statamic:assets:meta
+    php please stache:warm
 
     echo ""
     echo "📌 Version déployée : \$(cat version.txt 2>/dev/null || echo 'inconnue')"
