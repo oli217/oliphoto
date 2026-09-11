@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleryPasswordController;
+use App\Http\Controllers\GalleryPhotosController;
 use App\Http\Controllers\ZipDownloadController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,10 @@ Route::statamic('/galeries', 'galleries/index', ['title' => 'Galeries']);
 Route::post('/galeries/{slug}/unlock', [GalleryPasswordController::class, 'unlock'])
     ->middleware('cap.verify')
     ->name('gallery.unlock');
+
+// Photos paginées d'une galerie (infinite scroll)
+Route::get('/api/galleries/{slug}/photos', [GalleryPhotosController::class, 'index'])
+    ->name('gallery.photos');
 
 // Téléchargement ZIP d'une sélection de photos
 Route::post('/api/zip', [ZipDownloadController::class, 'download'])

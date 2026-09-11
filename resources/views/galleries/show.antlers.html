@@ -67,69 +67,12 @@
             {{# Sizer pour Masonry percentPosition #}}
             <div data-masonry-sizer></div>
 
-            {{ photos }}
-
-            <div
-                data-masonry-item
-                class="gallery-item"
-                :class="{ 'is-selected': isSelected('{{ id }}') }"
-            >
-                {{# Lien PhotoSwipe avec données EXIF #}}
-                <a
-                    data-pswp-src="{{ url }}"
-                    data-pswp-width="{{ width ?? 4000 }}"
-                    data-pswp-height="{{ height ?? 3000 }}"
-                    data-exif-camera="{{ exif_camera }}"
-                    data-exif-lens="{{ exif_lens }}"
-                    data-exif-focal="{{ exif_focal_length }}"
-                    data-exif-aperture="{{ exif_aperture }}"
-                    data-exif-shutter="{{ exif_shutter_speed }}"
-                    data-exif-iso="{{ exif_iso }}"
-                    data-exif-date="{{ exif_date_taken }}"
-                    data-asset-id="{{ id }}"
-                    aria-label="{{ alt ?? 'Voir en grand' }}"
-                >
-                    <picture>
-                        <source
-                            srcset="{{ glide :src='url' preset='gallery_avif' }}"
-                            type="image/avif"
-                        >
-                        <source
-                            srcset="{{ glide :src='url' preset='gallery_webp' }}"
-                            type="image/webp"
-                        >
-                        <img
-                            src="{{ url }}"
-                            alt="{{ alt }}"
-                            width="{{ width }}"
-                            height="{{ height }}"
-                            loading="lazy"
-                            class="w-full h-auto block"
-                        >
-                    </picture>
-                </a>
-
-                {{# Bouton de sélection (clic ne déclenche pas la lightbox) #}}
-                <button
-                    @click.stop="toggle('{{ id }}')"
-                    class="select-btn"
-                    :aria-label="isSelected('{{ id }}') ? 'Désélectionner' : 'Sélectionner'"
-                >
-                    <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                </button>
-            </div>
-
-            {{ /photos }}
-
-            {{ no_results }}
-            <p class="py-20 text-center text-zinc-500 text-sm w-full">
-                Cette galerie ne contient pas encore de photos.
-            </p>
-            {{ /no_results }}
+            {{# Les photos sont chargées dynamiquement via infinite scroll (Alpine + /api/galleries/{slug}/photos) #}}
+            <div id="gallery-sentinel" class="w-full"></div>
 
         </div>
+
+        <div x-show="loading" class="py-8 text-center text-zinc-500 text-sm">Chargement…</div>
     </div>
 
     {{# ─── Barre de sélection flottante ─────────────────────────────────────── #}}
