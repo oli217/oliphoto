@@ -110,7 +110,7 @@ ssh -T $REMOTE bash << ENDSSH
     php please stache:clear
     php please stache:warm
     php artisan statamic:assets:meta
-    php please static:clear
+    php please static:clear 2>/dev/null || true
     php please glide:clear
 
     echo ""
