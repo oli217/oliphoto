@@ -108,16 +108,14 @@ Alpine.data('gallery', (gallerySlug) => ({
 
             const data = await res.json()
 
-            const grid     = document.getElementById('pswp-gallery')
-            const sentinel = document.getElementById('gallery-sentinel')
-
+            const grid  = document.getElementById('pswp-gallery')
             const items = data.photos.map(p => {
                 const tmp = document.createElement('div')
                 tmp.innerHTML = this.photoHTML(p)
                 return tmp.firstElementChild
             })
 
-            items.forEach(item => grid.insertBefore(item, sentinel))
+            items.forEach(item => grid.appendChild(item))
             this.msnry.appended(items)
 
             this.page    = data.current_page

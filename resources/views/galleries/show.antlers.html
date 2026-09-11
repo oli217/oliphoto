@@ -67,12 +67,11 @@
             {{# Sizer pour Masonry percentPosition #}}
             <div data-masonry-sizer></div>
 
-            {{# Les photos sont chargées dynamiquement via infinite scroll (Alpine + /api/galleries/{slug}/photos) #}}
-            <div id="gallery-sentinel" class="w-full"></div>
-
         </div>
 
-        {{# Skeleton loader — visible pendant le chargement de chaque page #}}
+        {{# Sentinel en dehors du grid Masonry (items en position:absolute → sentinel resterait en haut sinon) #}}
+        <div id="gallery-sentinel"></div>
+
         {{# Skeleton loader — classes CSS pour éviter les violations CSP (pas d'inline style) #}}
         <div x-show="loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-0">
             <div class="gallery-skeleton"></div>

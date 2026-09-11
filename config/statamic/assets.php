@@ -96,9 +96,9 @@ return [
         */
 
         'presets' => [
-            // Galerie — affichage masonry (largeur max 1600px)
-            'gallery_avif' => ['w' => 1600, 'q' => 80, 'fm' => 'avif'],
-            'gallery_webp' => ['w' => 1600, 'q' => 82, 'fm' => 'webp'],
+            // Galerie — miniatures masonry (900px couvre 2x DPR sur colonne 33%)
+            'gallery_avif' => ['w' => 900,  'q' => 80, 'fm' => 'avif'],
+            'gallery_webp' => ['w' => 900,  'q' => 82, 'fm' => 'webp'],
             // Miniatures — listing des galeries (largeur max 800px)
             'thumb_avif'    => ['w' => 800,  'q' => 78, 'fm' => 'avif', 'fit' => 'crop'],
             'thumb_webp'    => ['w' => 800,  'q' => 80, 'fm' => 'webp', 'fit' => 'crop'],
