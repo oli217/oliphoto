@@ -26,11 +26,13 @@ class GalleryPhotosController extends Controller
             abort_if($stored !== $expected, 403);
         }
 
-        $query  = $entry->augmentedValue('photos')->value();
-        $total  = $query->count();
-        $page   = max(1, (int) $request->query('page', 1));
-        $offset = ($page - 1) * self::PER_PAGE;
-        $slice  = $query->offset($offset)->limit(self::PER_PAGE)->get();
+        // OrderedQueryBuilder applique take() avant skip() → skip() après take(50) donne vide.
+        // On charge toute la collection ordonnée, puis on slice côté PHP.
+        $allPhotos = $entry->augmentedValue('photos')->value()->get();
+        $total     = $allPhotos->count();
+        $page      = max(1, (int) $request->query('page', 1));
+        $offset    = ($page - 1) * self::PER_PAGE;
+        $slice     = $allPhotos->slice($offset, self::PER_PAGE)->values();
 
         $photos = $slice->map(fn ($asset) => [
             'id'            => $asset->id(),

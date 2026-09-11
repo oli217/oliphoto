@@ -72,7 +72,15 @@
 
         </div>
 
-        <div x-show="loading" class="py-8 text-center text-zinc-500 text-sm">Chargement…</div>
+        {{# Skeleton loader — visible pendant le chargement de chaque page #}}
+        <div x-show="loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-0">
+            <div class="gallery-skeleton" style="aspect-ratio:4/3"></div>
+            <div class="gallery-skeleton" style="aspect-ratio:3/4"></div>
+            <div class="gallery-skeleton" style="aspect-ratio:16/9"></div>
+            <div class="gallery-skeleton" style="aspect-ratio:3/2"></div>
+            <div class="gallery-skeleton" style="aspect-ratio:4/3"></div>
+            <div class="gallery-skeleton" style="aspect-ratio:3/4"></div>
+        </div>
     </div>
 
     {{# ─── Barre de sélection flottante ─────────────────────────────────────── #}}

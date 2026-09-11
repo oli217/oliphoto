@@ -101,24 +101,33 @@ Alpine.data('gallery', (gallerySlug) => ({
         if (this.loading || !this.hasMore) return
         this.loading = true
 
-        const res  = await fetch(`/api/galleries/${this.slug}/photos?page=${this.page + 1}`)
-        const data = await res.json()
+        try {
+            const res  = await fetch(`/api/galleries/${this.slug}/photos?page=${this.page + 1}`)
 
-        const grid     = document.getElementById('pswp-gallery')
-        const sentinel = document.getElementById('gallery-sentinel')
+            if (! res.ok) throw new Error(`HTTP ${res.status}`)
 
-        const items = data.photos.map(p => {
-            const tmp = document.createElement('div')
-            tmp.innerHTML = this.photoHTML(p)
-            return tmp.firstElementChild
-        })
+            const data = await res.json()
 
-        items.forEach(item => grid.insertBefore(item, sentinel))
-        this.msnry.appended(items)
+            const grid     = document.getElementById('pswp-gallery')
+            const sentinel = document.getElementById('gallery-sentinel')
 
-        this.page    = data.current_page
-        this.hasMore = data.has_more
-        this.loading = false
+            const items = data.photos.map(p => {
+                const tmp = document.createElement('div')
+                tmp.innerHTML = this.photoHTML(p)
+                return tmp.firstElementChild
+            })
+
+            items.forEach(item => grid.insertBefore(item, sentinel))
+            this.msnry.appended(items)
+
+            this.page    = data.current_page
+            this.hasMore = data.has_more
+        } catch (err) {
+            console.error('Erreur chargement photos:', err)
+            this.hasMore = false
+        } finally {
+            this.loading = false
+        }
     },
 
     photoHTML(p) {

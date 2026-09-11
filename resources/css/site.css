@@ -122,6 +122,20 @@
     font-size: 0.65rem;
 }
 
+/* ─── Skeleton loader (infinite scroll) ────────────────────────────────────── */
+
+@keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.gallery-skeleton {
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgb(39 39 42) 0%, rgb(63 63 70) 50%, rgb(39 39 42) 100%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
 /* ─── Gallery cards (index) ─────────────────────────────────────────────────── */
 
 .gallery-card {
