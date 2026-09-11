@@ -145,7 +145,6 @@ Alpine.data('gallery', (gallerySlug) => ({
                data-exif-date="${esc(p.exif_date)}"
                aria-label="Voir en grand">
                 <picture>
-                    <source srcset="${esc(p.avif_url)}" type="image/avif">
                     <source srcset="${esc(p.webp_url)}" type="image/webp">
                     <img src="${esc(p.url)}" loading="lazy" class="w-full h-auto block"
                          width="${p.width ?? ''}" height="${p.height ?? ''}">

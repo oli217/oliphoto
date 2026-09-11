@@ -131,10 +131,14 @@
 
 .gallery-skeleton {
     border-radius: 4px;
+    aspect-ratio: 4/3;
     background: linear-gradient(90deg, rgb(39 39 42) 0%, rgb(63 63 70) 50%, rgb(39 39 42) 100%);
     background-size: 200% 100%;
     animation: skeleton-shimmer 1.5s ease-in-out infinite;
 }
+.gallery-skeleton--portrait  { aspect-ratio: 3/4; }
+.gallery-skeleton--wide      { aspect-ratio: 16/9; }
+.gallery-skeleton--landscape { aspect-ratio: 3/2; }
 
 /* ─── Gallery cards (index) ─────────────────────────────────────────────────── */
 

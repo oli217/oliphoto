@@ -73,13 +73,14 @@
         </div>
 
         {{# Skeleton loader — visible pendant le chargement de chaque page #}}
+        {{# Skeleton loader — classes CSS pour éviter les violations CSP (pas d'inline style) #}}
         <div x-show="loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-0">
-            <div class="gallery-skeleton" style="aspect-ratio:4/3"></div>
-            <div class="gallery-skeleton" style="aspect-ratio:3/4"></div>
-            <div class="gallery-skeleton" style="aspect-ratio:16/9"></div>
-            <div class="gallery-skeleton" style="aspect-ratio:3/2"></div>
-            <div class="gallery-skeleton" style="aspect-ratio:4/3"></div>
-            <div class="gallery-skeleton" style="aspect-ratio:3/4"></div>
+            <div class="gallery-skeleton"></div>
+            <div class="gallery-skeleton gallery-skeleton--portrait"></div>
+            <div class="gallery-skeleton gallery-skeleton--wide"></div>
+            <div class="gallery-skeleton gallery-skeleton--landscape"></div>
+            <div class="gallery-skeleton"></div>
+            <div class="gallery-skeleton gallery-skeleton--portrait"></div>
         </div>
     </div>
 

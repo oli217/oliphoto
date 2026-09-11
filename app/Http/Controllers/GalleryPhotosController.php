@@ -39,7 +39,6 @@ class GalleryPhotosController extends Controller
             'url'           => $asset->url(),
             'width'         => $asset->width(),
             'height'        => $asset->height(),
-            'avif_url'      => Image::manipulate($asset, ['preset' => 'gallery_avif']),
             'webp_url'      => Image::manipulate($asset, ['preset' => 'gallery_webp']),
             'exif_camera'   => $asset->get('exif_camera'),
             'exif_lens'     => $asset->get('exif_lens'),
