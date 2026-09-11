@@ -26,10 +26,11 @@ class GalleryPhotosController extends Controller
             abort_if($stored !== $expected, 403);
         }
 
-        $allPhotos = $entry->augmentedValue('photos')->value() ?? collect();
-        $page      = max(1, (int) $request->query('page', 1));
-        $offset    = ($page - 1) * self::PER_PAGE;
-        $slice     = $allPhotos->slice($offset, self::PER_PAGE)->values();
+        $query  = $entry->augmentedValue('photos')->value();
+        $total  = $query->count();
+        $page   = max(1, (int) $request->query('page', 1));
+        $offset = ($page - 1) * self::PER_PAGE;
+        $slice  = $query->offset($offset)->limit(self::PER_PAGE)->get();
 
         $photos = $slice->map(fn ($asset) => [
             'id'            => $asset->id(),
@@ -50,8 +51,8 @@ class GalleryPhotosController extends Controller
         return response()->json([
             'photos'       => $photos,
             'current_page' => $page,
-            'has_more'     => ($offset + self::PER_PAGE) < $allPhotos->count(),
-            'total'        => $allPhotos->count(),
+            'has_more'     => ($offset + self::PER_PAGE) < $total,
+            'total'        => $total,
         ]);
     }
 }
