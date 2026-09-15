@@ -28,7 +28,9 @@ class GalleryPhotosController extends Controller
 
         // OrderedQueryBuilder applique take() avant skip() → skip() après take(50) donne vide.
         // On charge toute la collection ordonnée, puis on slice côté PHP.
-        $allPhotos = $entry->augmentedValue('photos')->value()->get();
+        $allPhotos = $entry->augmentedValue('photos')->value()->get()
+            ->sortBy(fn ($asset) => $asset->get('exif_date_taken') ?? '9999')
+            ->values();
         $total     = $allPhotos->count();
         $page      = max(1, (int) $request->query('page', 1));
         $offset    = ($page - 1) * self::PER_PAGE;
