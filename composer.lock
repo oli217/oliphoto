@@ -4035,16 +4035,16 @@
         },
         {
             "name": "oliweb/statamic-privacy-analytics",
-            "version": "v4.9.0",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oliweb-ch/statamic-privacy-analytics.git",
-                "reference": "a6528835f8183c384d57434b652265df1c6b0e54"
+                "reference": "fc178b9de36f3075e7bf9b763ba2603e2e7f62e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oliweb-ch/statamic-privacy-analytics/zipball/a6528835f8183c384d57434b652265df1c6b0e54",
-                "reference": "a6528835f8183c384d57434b652265df1c6b0e54",
+                "url": "https://api.github.com/repos/oliweb-ch/statamic-privacy-analytics/zipball/fc178b9de36f3075e7bf9b763ba2603e2e7f62e0",
+                "reference": "fc178b9de36f3075e7bf9b763ba2603e2e7f62e0",
                 "shasum": ""
             },
             "require": {
@@ -4104,7 +4104,7 @@
                 "email": "info@oliweb.ch",
                 "github": "https://github.com/oliweb-ch/statamic-privacy-analytics",
                 "issues": "https://github.com/oliweb-ch/statamic-privacy-analytics/issues",
-                "source": "https://github.com/oliweb-ch/statamic-privacy-analytics/tree/v4.9.0"
+                "source": "https://github.com/oliweb-ch/statamic-privacy-analytics/tree/v4.10.0"
             },
             "funding": [
                 {
@@ -4112,7 +4112,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-09-16T16:58:46+00:00"
+            "time": "2026-09-17T08:34:56+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
