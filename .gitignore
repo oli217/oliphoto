@@ -20,6 +20,7 @@
 /public/static
 /public/storage
 /public/vendor/statamic
+public/vendor/statamic-privacy-analytics
 /public/photos
 /storage/*.key
 /storage/pail
