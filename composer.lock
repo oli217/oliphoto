@@ -3847,16 +3847,16 @@
         },
         {
             "name": "oliweb/laravel-cap",
-            "version": "v1.10.0",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oliweb-ch/laravel-cap.git",
-                "reference": "6ef553ba99d9e6c27b7195ec5549cc12f006a876"
+                "reference": "b27b2632d65727869eb75c7039b121495bd4bec3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oliweb-ch/laravel-cap/zipball/6ef553ba99d9e6c27b7195ec5549cc12f006a876",
-                "reference": "6ef553ba99d9e6c27b7195ec5549cc12f006a876",
+                "url": "https://api.github.com/repos/oliweb-ch/laravel-cap/zipball/b27b2632d65727869eb75c7039b121495bd4bec3",
+                "reference": "b27b2632d65727869eb75c7039b121495bd4bec3",
                 "shasum": ""
             },
             "require": {
@@ -3904,22 +3904,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oliweb-ch/laravel-cap/issues",
-                "source": "https://github.com/oliweb-ch/laravel-cap/tree/v1.10.0"
+                "source": "https://github.com/oliweb-ch/laravel-cap/tree/v1.14.0"
             },
-            "time": "2026-08-09T14:23:54+00:00"
+            "time": "2026-09-24T05:51:58+00:00"
         },
         {
             "name": "oliweb/statamic-cap",
-            "version": "v1.13.1",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oliweb-ch/statamic-cap.git",
-                "reference": "9b6fc865d7c41e686e8d2a92b7cf1596c50a4f0b"
+                "reference": "be94a6a99340e9e73f4e684736072cd300fff929"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oliweb-ch/statamic-cap/zipball/9b6fc865d7c41e686e8d2a92b7cf1596c50a4f0b",
-                "reference": "9b6fc865d7c41e686e8d2a92b7cf1596c50a4f0b",
+                "url": "https://api.github.com/repos/oliweb-ch/statamic-cap/zipball/be94a6a99340e9e73f4e684736072cd300fff929",
+                "reference": "be94a6a99340e9e73f4e684736072cd300fff929",
                 "shasum": ""
             },
             "require": {
@@ -3971,9 +3971,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oliweb-ch/statamic-cap/issues",
-                "source": "https://github.com/oliweb-ch/statamic-cap/tree/v1.13.1"
+                "source": "https://github.com/oliweb-ch/statamic-cap/tree/v1.14.0"
             },
-            "time": "2026-08-10T05:54:30+00:00"
+            "time": "2026-09-24T05:47:24+00:00"
         },
         {
             "name": "oliweb/statamic-csp-nonce",
